@@ -12,7 +12,7 @@
 
   --grid-item: 3;
 
-  --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --animation: 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 html {
@@ -164,7 +164,7 @@ img {
   opacity: 1;
 }
 
-.contacts__list {
+.contacts {
   display: inline-flex;
   list-style: none;
   padding-left: 0;
@@ -191,10 +191,10 @@ img {
 .navigation__link:focus,
 .contacts__link:hover,
 .contacts__link:focus,
-.adress__link:hover,
-.adress__link:focus,
-.adress__link:hover,
-.adress__link:focus {
+.address__link:hover,
+.address__link:focus,
+.address__link:hover,
+.address__link:focus {
   color: var(--accent-text-color);
 }
 
@@ -251,7 +251,7 @@ img {
   color: var(--main-text-color);
 }
 
-.button__portfolio-page_filter {
+.filter-list__button {
   font-size: 16px;
   background-color: var(--auxiliary-bg-color);
   font-weight: 500;
@@ -260,8 +260,8 @@ img {
   padding: 6px 22px;
 }
 
-.button__portfolio-page_filter:hover,
-.button__portfolio-page_filter:focus {
+.filter-list__button:hover,
+.filter-list__button:focus {
   background-color: var(--accent-text-color);
   color: var(--main-bg-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -446,12 +446,12 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 
-.name-profession {
+.team-member__meta {
   padding-bottom: 30px;
   padding-top: 30px;
 }
 
-.our-team__subtitle_name {
+.team-member__name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -460,7 +460,7 @@ img {
   margin: 0;
 }
 
-.our-team__subtitle_profession {
+.team-member__profession {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
@@ -472,14 +472,14 @@ img {
 
 /*Social icons links  */
 
-.socials__list {
+.socials {
   display: flex;
   list-style: none;
   padding-left: 0;
   margin: 0;
 }
 
-.socials__list_ourteam {
+.socials__ourteam {
   justify-content: center;
 }
 
@@ -617,7 +617,7 @@ img {
   padding-bottom: 20px;
 }
 
-.adress__link {
+.address__link {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -627,35 +627,35 @@ img {
   transition: color var(--animation);
 }
 
-.adress__link_white {
+.address__link_white {
   color: var(--main-bg-color);
 }
 
-.adress__list {
+.address__list {
   padding-bottom: 57px;
   list-style: none;
   padding-left: 0;
   margin: 0;
 }
 
-.adress__item:not(:first-child) {
+.address__item:not(:first-child) {
   margin-top: 9px;
 }
 
-.socials__list_footer {
+.socials_margin-top {
   margin-top: 20px;
 }
 
-.socials__icon_footer {
+.socials__icon_notfill {
   fill: var(--main-bg-color);
 }
 
-.socials__link_footer {
+.socials__link_bgcgrey {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.socials__link_footer:hover,
-.socials__link_footer:focus {
+.socials__link_bgcgrey:hover,
+.socials__link_bgcgrey:focus {
   background-color: var(--accent-text-color);
 }
 
@@ -736,13 +736,13 @@ img {
   padding-top: 94px;
 }
 
-.porfolio-page__list_choice {
+.product-list {
   list-style: none;
   padding-left: 0;
   margin-bottom: 0;
 }
 
-.portfolio-page__object {
+.product__name {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -751,7 +751,7 @@ img {
   margin: 0;
 }
 
-.portfolio-page__field {
+.product__field {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
@@ -760,7 +760,7 @@ img {
   color: var(--auxiliary-text-color);
 }
 
-.portfolio-page__list_filter {
+.filter-list {
   display: flex;
   justify-content: center;
   list-style: none;
@@ -769,25 +769,25 @@ img {
   margin-bottom: 50px;
 }
 
-.portfolio-page__item_filter:not(:last-child) {
+.filter-list__item:not(:last-child) {
   margin-right: 8px;
 }
 
-.portfolio-page__link_choice {
+.product__link {
   display: inline-block;
   cursor: pointer;
   transition: box-shadow var(--animation);
   text-decoration: none;
 }
 
-.portfolio-page__link_choice:hover,
-.portfolio-page__link_choice:focus {
+.product__link:hover,
+.product__link:focus {
   box-sizing: border-box;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio-page__expo {
+.product__meta {
   background-color: var(--main-bg-color);
   border: 1px solid #eeeeee;
   padding: 20px 24px;
@@ -797,7 +797,7 @@ img {
   overflow: hidden;
 }
 
-.portfolio-page__description_choice {
+.product__description {
   position: absolute;
   top: 0;
   left: 0;
@@ -810,14 +810,14 @@ img {
     background-color var(--animation);
 }
 
-.portfolio-page__link_choice:hover .portfolio-page__description_choice,
-.portfolio-page__link_choice:focus .portfolio-page__description_choice {
+.product__link:hover .product__description,
+.product__link:focus .product__description {
   background-color: rgba(33, 150, 243, 0.9);
   opacity: 1;
   transform: translate(0, 0);
 }
 
-.portfolio-page__text_choice {
+.product__text {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.5;
