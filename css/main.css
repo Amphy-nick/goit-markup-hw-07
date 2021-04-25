@@ -492,7 +492,7 @@ img {
 }
 
 .check__input:checked + .check__box {
-  background-color: var(--auxiliary-text-color);
+  background-color: var(--accent-text-color);
   background-image: url(../images/svg-icons/icons/on.svg);
   background-repeat: no-repeat;
   background-size: cover;
